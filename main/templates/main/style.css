@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.rounded-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ddd; /* Добавляем рамку */
+    background-color: #fff; /* Фон для изображения */
+    transition: all 0.3s ease; /* Добавляем плавную анимацию при наведении */
+  }
+  
+  .rounded-image:hover {
+    transform: scale(1.1); /* Увеличиваем изображение при наведении */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  .tab-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tab {
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .tab:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .tab-active {
+    border-bottom-color: #3498db;
+    color: #3498db;
+  }
+.tab-right {
+    order: 3; /* Устанавливаем порядок отображения элемента */
+  }
+  .tab-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tab {
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    /* Другие стили для обычных вкладок */
+  }
+  
+  .tab-profile {
+    order: 3; /* Устанавливаем порядок отображения элемента */
+    position: relative; /* Делаем элемент позиционируемым */
+  }
+  
+  .profile-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 5px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+/* ... другие стили */
