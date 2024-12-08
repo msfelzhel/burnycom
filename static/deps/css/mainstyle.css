@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 header {
-    background-color: #f0f0f0;
+    background-color: #910c7a;
     padding: 20px;
     text-align: center;
 }
@@ -13,7 +13,7 @@ header {
     display: flex;
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #9e1580;
   }
   
   .tab {
@@ -24,7 +24,7 @@ header {
   }
   
   .tab:hover {
-    background-color: #f2f2f2;
+    background-color: #f048c6;
   }
   
   .tab-active {
