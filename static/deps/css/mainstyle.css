@@ -1,127 +1,144 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
 }
+
 header {
-    background-color: #910c7a;
-    padding: 20px;
-    text-align: center;
+  background-color: #910c7a;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
 }
-  .tab-list {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid #9e1580;
-  }
-  
-  .tab {
-    padding: 15px;
-    cursor: pointer;
-    text-align: center;
-    border-bottom: 2px solid transparent;
-  }
-  
-  .tab:hover {
-    background-color: #f048c6;
-  }
-  
-  .tab-active {
-    border-bottom-color: #3498db;
-    color: #3498db;
-  }
+
+.tab-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #9e1580;
+}
+
+.tab {
+  padding: 15px;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+}
+
+.tab:hover {
+  background-color: #f048c6;
+}
+
+.tab-active {
+  border-bottom-color: #3498db;
+  color: #3498db;
+}
+
 .tab-right {
-    order: 3; /* Устанавливаем порядок отображения элемента */
-  }
-  .tab-list {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .tab {
-    padding: 15px;
-    cursor: pointer;
-    text-align: center;
-    border-bottom: 2px solid transparent;
-    /* Другие стили для обычных вкладок */
-  }
-  
-  .tab-profile {
-    order: 3; /* Устанавливаем порядок отображения элемента */
-    position: relative; /* Делаем элемент позиционируемым */
-  }
-  
-  .profile-icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: purple;
-    color: white;
-    text-align: center;
-    line-height: 20px;
-    margin-right: 5px;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+  order: 3;
+  /* Устанавливаем порядок отображения элемента */
+}
+
+.tab-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab {
+  padding: 15px;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  /* Другие стили для обычных вкладок */
+}
+
+.tab-profile {
+  order: 3;
+  /* Устанавливаем порядок отображения элемента */
+  position: relative;
+  /* Делаем элемент позиционируемым */
+}
+
+.profile-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: purple;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 
-  .razdelitel{
-    position: relative;
-    display: block;
-    margin:25px auto 20px;
-    width: 1px;
-    height: 2px;
-   }
-   .razdelitel:before,
-   .razdelitel:after{
-    content:'';
-    position: absolute;
-    top:0;
-    width: 70px;
-    height: 2px;
-    background-color: purple;
-   }
-   .razdelitel:before{
-    left:15px;
-   }
-   .razdelitel:after{
-    right: 15px;
-   }
-   .razdelitel div{
-    position: relative;
-   }
-   .razdelitel div:before,
-   .razdelitel div:after{
-    content:'';
-    position: absolute;
-    top:50%;
-    margin-top: -4px;
-    width: 10px;
-    height: 10px;
-    border:1px solid blue;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-   }
-   .razdelitel div:before{
-    left: -7px;
-   }
-   .razdelitel div:after{
-    right: -7px;
-   }
+.razdelitel {
+  position: relative;
+  display: block;
+  margin: 25px auto 20px;
+  width: 1px;
+  height: 2px;
+}
+
+.razdelitel:before,
+.razdelitel:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 2px;
+  background-color: purple;
+}
+
+.razdelitel:before {
+  left: 15px;
+}
+
+.razdelitel:after {
+  right: 15px;
+}
+
+.razdelitel div {
+  position: relative;
+}
+
+.razdelitel div:before,
+.razdelitel div:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid blue;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.razdelitel div:before {
+  left: -7px;
+}
+
+.razdelitel div:after {
+  right: -7px;
+}

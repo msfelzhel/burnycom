@@ -17,11 +17,11 @@
         <h1>Репетиторство от burny</h1>
     </header>
     <ul class="tab-list">
-        <li class="tab"><a href ="{% url "index" %}" >Главная</a></li>
+        <li class="tab"><a href ="{% url "main:index" %}" >Главная</a></li>
         <li class="tab dropdown">Материалы
             <ul class="dropdown-content">
-                <li><a href="{% url "matem" %}">Математика</a></li>
-                <li><a href="#">Информатика</a></li>
+                <li><a href="{% url "main:matem" %}">Математика</a></li>
+                <li><a href="{% url "main:inf" %}">Информатика</a></li>
               </ul>
         </li>
         <li class="tab">Задания</li>
@@ -39,7 +39,7 @@
         <div class="razdelitel"><div></div></div>
     </main>
     <footer>
-        <p>Copyright © 2024 Felix Zhelvis</p>
+        <p1>Copyright © 2024 Felix Zhelvis</p1>
     </footer>
 </body>
 </html>

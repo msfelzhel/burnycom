@@ -14,3 +14,9 @@ def matem(request):
         'content': 'Математика'
     }
     return render(request, 'main/matem.html' ,context)
+def inf(request):
+    context = {
+        'title': 'Burnycom - Информатика',
+        'content': 'Информатика'
+    }
+    return render(request, 'main/inf.html' ,context)

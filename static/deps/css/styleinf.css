@@ -1,0 +1,64 @@
+.task {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    background-color: #1c0083;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.task h2 {
+    margin-top: 0;
+}
+
+p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 30px #f0f;
+    background: linear-gradient(to right, #ff7979, #ff4646);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: neon 1s alternate infinite;
+}
+
+@keyframes neon {
+    50% {
+        text-shadow: 0 0 15px #fff, 0 0 30px #fff, 0 0 45px #fff;
+    }
+}
+
+h2 {
+    font-family: 'Chalkduster', cursive;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+    background: linear-gradient(to right, #015e6e, #3070e6);
+}
+
+.gitbut {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #e35aff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.gitbut::after {
+    content: "\2794";
+    /* Стрелочка вправо */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.gitbut:hover {
+    color: #ff41d0;
+    text-decoration: underline;
+}
+
+.gitbut:hover::after {
+    transform: translateX(5px);
+}
