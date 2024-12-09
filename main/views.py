@@ -20,3 +20,10 @@ def inf(request):
         'content': 'Информатика'
     }
     return render(request, 'main/inf.html' ,context)
+  
+def contacts(request):
+    context = {
+        'title': 'Burnycom - Контакты',
+        'content': 'Контакты'
+    }
+    return render(request, 'main/contacts.html' ,context)
