@@ -28,7 +28,9 @@
         </a>
       </div>
       <h2 class="text-xl text-white text-center mb-3">Рады тебя видеть!!</h2>
-      <form>
+      <form action="{% url "users:login" %}" method="post">
+        {% csrf_token %}
+        {{ form }}
         <div class="mb-3">
           <label for="exampleInputEmail" class="form-label text-white">Почта или имя</label>
           <input type="text" class="form-control border-0" id="exampleInputEmail">
@@ -50,7 +52,7 @@
         </div>
 
         <div class="text-center mt-3">
-          <button type="button" class="btn btn-primary w-full">Войти</button>
+          <button type="submit" class="btn btn-primary w-full">Войти</button>
         </div>
 
         <div class="d-flex align-items-center justify-content-between gap-x-4 mt-4">
