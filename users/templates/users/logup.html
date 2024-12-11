@@ -28,36 +28,64 @@
         </a>
       </div>
 
-      <form class="d-flex flex-column flex-1 justify-content-center">          
+      <form class="d-flex flex-column flex-1 justify-content-center" action = "{% url "users:logup" %}" method = "post">
+        {% csrf_token %}
         <h2 class="text-xl text-white text-center mb-3">Новый аккаунт</h2>
-
+    
         <div class="mb-3">
-          <label for="exampleInputEmail" class="form-label text-white">Почта</label>
-          <input type="email" class="form-control border-0" id="exampleInputEmail">
+            <label for="id_email" class="form-label text-white">Почта</label>
+            <input type="email" class="form-control border-0" id="id_email"
+            name = "email"
+            required>
         </div>
-
+    
         <div class="mb-3">
-          <label for="exampleInputUsername" class="form-label text-white">Имя</label>
-          <input type="email" class="form-control border-0" id="exampleInputUsername">
+            <label for="id_username" class="form-label text-white">Ник</label>
+            <input type="text" class="form-control border-0" id="id_username"
+            name = "username"
+            required>
         </div>
-
+    
         <div class="mb-3">
-          <label for="exampleInputPassword" class="form-label text-white">Пароль</label>
-          <div class="relative">
-            <input type="password" class="form-control pr-11 border-0" id="exampleInputPassword">
-            <button type="button" class="btn btn-link position-absolute h-100 end-0 top-0" id="password-addon">
-              <i class="mdi mdi-eye-outline f-16 text-white"></i>
-            </button>
-          </div>
+            <label for="id_first_name" class="form-label text-white">Имя</label>
+            <input type="text" class="form-control border-0" id="id_first_name"
+            name = "first_name"
+            required>
         </div>
-
+    
+        <div class="mb-3">
+            <label for="id_last_name" class="form-label text-white">Фамилия</label>
+            <input type="text" class="form-control border-0" id="id_last_name"
+            name = "last_name"
+            required>
+        </div>
+    
+        <div class="mb-3">
+            <label for="id_password1" class="form-label text-white">Пароль</label>
+            <div class="relative">
+                <input type="password" class="form-control pr-11 border-0" id="id_password1"
+                name = "password1"
+                required>
+            </div>
+        </div>
+    
+        <div class="mb-3">
+            <label for="id_password2" class="form-label text-white">Подтвердите пароль</label>
+            <div class="relative">
+                <input type="password" class="form-control pr-11 border-0" id="id_password2"
+                name = "password2"
+                required>
+            </div>
+        </div>
+    
+    
         <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck">
-          <label class="form-check-label text-white" for="exampleCheck">Я согласен с правилами Burnycom</label>
+            <input type="checkbox" class="form-check-input" id="exampleCheck">
+            <label class="form-check-label text-white" for="exampleCheck">Я согласен с правилами Burnycom</label>
         </div>
-
+    
         <div class="text-center mt-3">
-          <button type="button" class="btn btn-primary w-full">Зарегистрироваться</button>
+            <button type="submit" class="btn btn-primary w-full">Зарегистрироваться</button>
         </div>
 
         <div class="d-flex align-items-center justify-content-center gap-x-4 mt-4">

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
-from users.forms import UserLoginForm
+from users.forms import UserLoginForm, UserRegistrationForm
 from django.contrib import auth
 from django.urls import reverse
 
@@ -26,8 +26,18 @@ def login(request):
     return render(request, 'users/login.html',context)
 
 def logup(request):
+    if request.method == 'POST':     
+        form = UserRegistrationForm(data=request.POST)
+        if form.is_valid():
+            
+            form.save()
+            return HttpResponseRedirect(reverse('users:login'))
+    else:      
+        form = UserRegistrationForm()  
+    
+    
     context = {
         'title': 'Burnycom - Регистрация',
-        'content': 'Регистрация'
+        'form': form ,
     }
     return render(request, 'users/logup.html',context)
