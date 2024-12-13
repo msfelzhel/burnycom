@@ -1,87 +1,73 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
+/* Header Styling */
 header {
   background-color: #910c7a;
   padding: 20px;
   text-align: center;
-  color: #fff;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Tab Styling */
 .tab-list {
-  list-style: none;
   display: flex;
-  margin: 0;
+  justify-content: space-around;
   padding: 0;
-  border-bottom: 1px solid #9e1580;
+  margin: 0;
+  background-color: #ffffff;
+  border-bottom: 2px solid #dcdcdc;
 }
 
 .tab {
+  flex: 1;
   padding: 15px;
-  cursor: pointer;
   text-align: center;
-  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .tab:hover {
   background-color: #f048c6;
+  color: white;
 }
 
 .tab-active {
-  border-bottom-color: #3498db;
+  border-bottom: 3px solid #3498db;
   color: #3498db;
 }
 
-.tab-right {
-  order: 3;
-  /* Устанавливаем порядок отображения элемента */
-}
-
-.tab-list {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.tab {
-  padding: 15px;
-  cursor: pointer;
-  text-align: center;
-  border-bottom: 2px solid transparent;
-  /* Другие стили для обычных вкладок */
-}
-
 .tab-profile {
-  order: 3;
-  /* Устанавливаем порядок отображения элемента */
   position: relative;
-  /* Делаем элемент позиционируемым */
 }
 
 .profile-icon {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background-color: purple;
+  background-color: #6a1b9a;
   color: white;
   text-align: center;
-  line-height: 20px;
-  margin-right: 5px;
+  line-height: 30px;
+  margin-right: 8px;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #fff;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -89,13 +75,26 @@ header {
   display: block;
 }
 
+.dropdown-content a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #333;
+}
 
+.dropdown-content a:hover {
+  background-color: #f048c6;
+  color: white;
+}
+
+/* Separator Line Styling */
 .razdelitel {
   position: relative;
   display: block;
-  margin: 25px auto 20px;
+  margin: 40px auto;
   width: 1px;
   height: 2px;
+  background-color: #6a1b9a;
 }
 
 .razdelitel:before,
@@ -105,7 +104,7 @@ header {
   top: 0;
   width: 70px;
   height: 2px;
-  background-color: purple;
+  background-color: #6a1b9a;
 }
 
 .razdelitel:before {
@@ -128,10 +127,7 @@ header {
   margin-top: -4px;
   width: 10px;
   height: 10px;
-  border: 1px solid blue;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  border: 1px solid #3498db;
   transform: rotate(45deg);
 }
 
@@ -141,4 +137,35 @@ header {
 
 .razdelitel div:after {
   right: -7px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 1px solid #dcdcdc;
+}
+
+footer p {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .tab-list {
+    flex-direction: column;
+  }
+
+  .tab {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+
+  .razdelitel {
+    width: 100px;
+  }
 }
