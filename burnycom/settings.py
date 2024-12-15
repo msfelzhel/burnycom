@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'main',
     'taski',
     'users',
+    'lk'
 ]
 
 MIDDLEWARE = [
