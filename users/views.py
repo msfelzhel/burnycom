@@ -19,7 +19,7 @@ def login(request):
             form = UserLoginForm()  
     
     context = {
-        'title': 'Burnycom - Вход',
+        'title': 'Вход',
         'content': 'Вход',
         'form': form
     }
@@ -37,7 +37,7 @@ def logup(request):
     
     
     context = {
-        'title': 'Burnycom - Регистрация',
+        'title': 'Регистрация',
         'form': form ,
     }
     return render(request, 'users/logup.html',context)

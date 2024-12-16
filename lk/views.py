@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 def lk(request):
     context = {
-        'title': 'Burnycom - Личный кабинет',
+        'title': 'Личный кабинет',
         'content': 'Личный кабинет'
     }
     return render(request, 'lk/profil.html',context)

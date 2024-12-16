@@ -1,0 +1,179 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 70px 30px;
+    background-color: #2b2d42;
+    border-radius: 15px;
+    margin: 50px auto;
+    max-width: 800px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-size: 2.8rem;
+    color: #edf2f4;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+  }
+  
+  .contact-section p {
+    font-size: 1.3rem;
+    color: #8d99ae;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+  }
+  
+  .contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-list li {
+    margin: 20px;
+  }
+  
+  .contact-list a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact-list a:hover {
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-list a i {
+    margin-right: 12px;
+    font-size: 1.6rem;
+  }
+  
+  /* Footer Email */
+  footer.mail {
+    font-size: 1.2rem;
+    color: #edf2f4;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  /* Task Section */
+  .task-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin: 50px auto;
+    max-width: 1000px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-section h2 {
+    font-size: 2.5rem;
+    color: #2b2d42;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .task {
+    background-color: #edf2f4;
+    border-left: 5px solid #3498db;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .task:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .task h3 {
+    font-size: 1.5rem;
+    color: #2b2d42;
+    margin-bottom: 10px;
+  }
+  
+  .task p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+  }
+  
+  .task .task-actions {
+    margin-top: 10px;
+    text-align: right;
+  }
+  
+  .task .task-actions a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #3498db;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .task .task-actions a:hover {
+    color: #8e44ad;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .contact-section {
+      padding: 50px 20px;
+    }
+  
+    .contact-section h2 {
+      font-size: 2.3rem;
+    }
+  
+    .contact-section p {
+      font-size: 1.1rem;
+    }
+  
+    .contact-list a {
+      font-size: 1.1rem;
+      padding: 12px 25px;
+    }
+  
+    .task-section {
+      padding: 40px 15px;
+    }
+  
+    .task {
+      padding: 10px 15px;
+    }
+  
+    .task h3 {
+      font-size: 1.3rem;
+    }
+  }
+  

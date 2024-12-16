@@ -14,13 +14,13 @@
 </head>
 <body>
     <header>
-        <h1>Репетиторство от burny</h1>
+        <h1>Репетиторство</h1>
     </header>
     <ul class="tab-list">
         <li class="tab"><a href ="{% url "main:index" %}" >Главная</a></li>
         <li class = "tab"><a href="{% url "main:matem" %}">Математика</a></li>
         <li class = "tab"><a href="{% url "main:inf" %}">Информатика</a></li>
-        <li class="tab">Задания</li>
+        <li class="tab"><a href = "{% url "task:task" %}">Задания</a></li>
         <li class="tab" ><a href = "{% url "main:contacts" %}">Контакты</a></li>
         <li class="tab">
         {% if user.is_authenticated %}
@@ -36,7 +36,7 @@
         <div class="razdelitel"><div></div></div>
     </main>
     <footer>
-        <p1>Copyright © 2024 Felix Zhelvis</p1>
+        <p1>Copyright © 2024</p1>
     </footer>
 </body>
 </html>

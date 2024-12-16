@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'deps/css/styletasks.css' %}">
+{% endblock css %}
+{% block html %}
+<section class="task-section">
+    <h2>Ваши задачи</h2>
+    <div class="task">
+        <h3>Задача 1</h3>
+        <p>Описание задачи: Сделать дизайн главной страницы.</p>
+    </div>
+</section>
+{% endblock html %}
