@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block css %}
+
+    <link rel="stylesheet" href="{% static "deps/css/stylekontak.css" %}"> </head>
+{% endblock css %}
+{% block html %}
+    <section class="contact-section">
+        <h2>Свяжитесь со мной</h2>
+        <p>Хотите задать вопрос или просто поболтать? Буду рад!</p>
+        <ul class="contact-list">
+            <li>
+                <a href="https://t.me/litoveec" target="_blank">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/msfelzhel" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </li>
+        </ul>
+        <footer class="mail">
+            msfelzhel@gmail.com
+        </footer>
+    </section>
+
+    <script src="https://kit.fontawesome.com/your_fontawesome_kit.js" crossorigin="anonymous"></script>
+{% endblock html %}

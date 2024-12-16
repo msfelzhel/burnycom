@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{% static "deps/css/bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{% static "deps/css/stylereg.css" %}">
+  <link rel="icon" href="{% static "deps/source/icon.ico" %}" type="image/x-icon"> 
+  
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap">
+</head>
+<body>
+<div class="min-vh-100">
+  <div class="bg-overlay"></div>
+  <div class="container d-flex align-items-center px-5 h-screen z-1 relative">
+    <div class="shadow bg-indigo-950 d-flex flex-column form-layout">
+
+      <div class="d-flex justify-content-center mb-4">
+        <a href="{% url "main:index" %}" class="d-flex align-items-center gap-x-1">
+          <h1 class="text-uppercase text-white font-bold text-2xl mb-0">Burnycom</h1>
+        </a>
+      </div>
+      <h2 class="text-xl text-white text-center mb-3">Рады тебя видеть!!</h2>
+      <form action="{% url "users:login" %}" method="post">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+        <h4 class='text-xl text-white text-center mb-3'><em>Неверное имя или пароль</em></h4>
+        {% endif %}
+        <div class="mb-3">
+          <label for="{{form.username.id_for_label}}" class="form-label text-white">Почта или имя</label>
+          {{form.username}}
+        </div>
+        <div class="mb-3">
+          <label for="{{form.password.id_for_label}}" class="form-label text-white">Пароль</label>        
+          <div class="relative">
+            {{form.password}}
+            <button type="button" class="btn btn-link position-absolute h-100 end-0 top-0" id="password-addon">
+              <i class="mdi mdi-eye-outline f-16 text-white"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck">
+          <label class="form-check-label text-white" for="exampleCheck">Запомнить меня</label>
+        </div>
+
+        <div class="text-center mt-3">
+          <button type="submit" class="btn btn-primary w-full">Войти</button>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between gap-x-4 mt-4">
+          <div class="d-flex align-items-center gap-x-4">
+            <p class="text-sm mb-0 text-white">Еще нет аккаунта?</p>
+            <a href="{% url "users:logup" %}" class="text-sm no-underline text-cyan-400 hover:text-cyan-500">
+              Регистрация
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScripts -->
+<script src="{% static "deps/js/bootstrap.bundle.min.js" %}"></script>
+<script src="{% static "deps/js/indexreg.js" %}"></script>
+</body>
+</html>

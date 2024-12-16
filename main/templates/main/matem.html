@@ -1,0 +1,34 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block css %}
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="{% static "deps/css/stylematem.css" %}">
+{% endblock css %}
+  
+{% block html %}
+  <header>
+    <h1>Математика </h1>
+    <nav>
+      <ul>
+        <li><a href="#">Алгебра</a></li>
+        <li><a href="#">Геометрия</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main>
+    <header>
+    </header>
+<nav>
+    </nav>
+<main>
+    <section id="algebra">
+        <h2>Алгебра</h2>
+        <p>Уравнения и неравенства</p>
+        <div class="task">
+            <p>Решите уравнение: \(2x + 5 = 11\)</p>
+            <input type="text" id="answer">
+            <button onclick="checkAnswer()">Проверить</button>
+        </div>
+    </section>
+    </main>
+{% endblock html %}

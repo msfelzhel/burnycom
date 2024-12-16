@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(135deg, #8e44ad, #e74c3c);
+  padding: 25px;
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation Tabs */
+.tab-list {
+  display: flex;
+  justify-content: center;
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+  flex: 1;
+  max-width: 180px;
+  text-align: center;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  margin: 0 10px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.tab:hover {
+  background: #e74c3c;
+  color: white;
+  border-color: #e74c3c;
+}
+
+.tab-active {
+  background: #8e44ad;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #8e44ad;
+}
+
+/* Profile Dropdown */
+.tab-profile {
+  position: relative;
+}
+
+.profile-icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #8e44ad;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 8px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.tab-profile:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #444;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+/* Separator Styling */
+.razdelitel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.razdelitel::before,
+.razdelitel::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #8e44ad, #e74c3c);
+  margin: 0 15px;
+}
+
+.razdelitel div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #e74c3c;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+/* Footer Styling */
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 1rem;
+  color: #666;
+  border-top: 2px solid #e0e0e0;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 2rem;
+    padding: 20px;
+  }
+
+  .tab-list {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .tab {
+    padding: 10px;
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 5px 0;
+  }
+
+  .razdelitel::before,
+  .razdelitel::after {
+    margin: 0 10px;
+  }
+
+  .razdelitel div {
+    width: 25px;
+    height: 25px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}

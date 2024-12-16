@@ -1,0 +1,25 @@
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .task {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
