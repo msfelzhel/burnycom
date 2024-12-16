@@ -20,7 +20,12 @@
         <li class="tab"><a href ="{% url "main:index" %}" >Главная</a></li>
         <li class = "tab"><a href="{% url "main:matem" %}">Математика</a></li>
         <li class = "tab"><a href="{% url "main:inf" %}">Информатика</a></li>
-        <li class="tab"><a href = "{% url "task:task" %}">Задания</a></li>
+        <li class="tab">
+            {% if user.is_authenticated %}
+            <a href = "{% url "task:task" %}">Задания</a></li>
+            {% else %}
+            <a href = "{% url "users:login" %}">Задания</a></li>
+            {% endif %}
         <li class="tab" ><a href = "{% url "main:contacts" %}">Контакты</a></li>
         <li class="tab">
         {% if user.is_authenticated %}
